@@ -11,12 +11,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Conway\Log.h" />
     <ClInclude Include="src\Conway.h" />
     <ClInclude Include="src\Conway\Application.h" />
     <ClInclude Include="src\Conway\Core.h" />
     <ClInclude Include="src\Conway\EntryPoint.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Conway\Log.cpp" />
     <ClCompile Include="src\Conway\Application.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -66,6 +68,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>CW_PLATFORM_WINDOWS;CW_BUILD_DLL;_WINDLL;%(PreprocessorDefintions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Conway\vendor\spdlog\include;</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -80,6 +84,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>CW_PLATFORM_WINDOWS;CW_BUILD_DLL;_WINDLL;%(PreprocessorDefintions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Conway\vendor\spdlog\include;</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
